@@ -17,34 +17,34 @@ public class Prospect extends Ship {
 		super(highSlots, midSlots, lowSlots, droneBay, droneBandwidth, cargoBay, oreBay, targetRange, sigRadius,
 				maxVelocity);
 		// fitting attributes
-				highSlots = 3;
-				midSlots = 3;
-				lowSlots = 4;
-				
-				// drone attributes (if applicable)
-				droneBay = 0;
-				droneBandwidth = 0;
-				
-				// Cargo attributes
-				cargoBay = 150;
-				oreBay = 10000;
-				
-				// targeting attributes
-				targetRange = 20;
-				sigRadius = 40;
-				
-				// velocity attributes
-				maxVelocity = 380;
-				
-				// Mining Frigate skill bonuses
-				frigateYieldBonus = 1.05; // 5% bonus
-				gasHarvDurBonus = 0.05; // 5% reduction
-				
-				// Expedition Frigate skill bonuses
-				expeditionYieldBonus = 1.05; // 5% bonus
-				
-				// Role bonuses
-				roleYieldBonus = 2; // 100% bonus
+		highSlots = 3;
+		midSlots = 3;
+		lowSlots = 4;
+		
+		// drone attributes (if applicable)
+		droneBay = 0;
+		droneBandwidth = 0;
+		
+		// Cargo attributes
+		cargoBay = 150;
+		oreBay = 10000;
+		
+		// targeting attributes
+		targetRange = 20;
+		sigRadius = 40;
+		
+		// velocity attributes
+		maxVelocity = 380;
+		
+		// Mining Frigate skill bonuses
+		frigateYieldBonus = 1.05; // 5% bonus
+		gasHarvDurBonus = 0.05; // 5% reduction
+		
+		// Expedition Frigate skill bonuses
+		expeditionYieldBonus = 1.05; // 5% bonus
+		
+		// Role bonuses
+		roleYieldBonus = 2; // 100% bonus
 	}
 
 	public double getFrigateYieldBonus() {
