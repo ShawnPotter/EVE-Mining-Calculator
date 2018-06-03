@@ -1,3 +1,11 @@
+/**
+ * 
+ * Abstract template to set up all ships. Some of these variables
+ * aren't going to be used and some ships will need additional variables.
+ *  
+ * @author Shawn Potter
+ */
+
 package ships;
 
 public abstract class Ship {

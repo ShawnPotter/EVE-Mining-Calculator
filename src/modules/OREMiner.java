@@ -1,3 +1,7 @@
+/** 
+ * @author Shawn Potter
+ */
+
 package modules;
 
 public class OREMiner extends MiningMod {

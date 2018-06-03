@@ -1,3 +1,15 @@
+/**
+ * 
+ * The launcher for the calculator. Currently only running on System output,
+ * will update at some point to run in a GUI. First in the current format
+ * and maybe later using things like buttons and radio buttons.
+ * 
+ * I've actually made both a version almost exactly like this and one with a GUI 
+ * in Python for finals in my IT classes. 
+ * 
+ * @author Shawn Potter
+ */
+
 package main;
 
 import java.util.Scanner;

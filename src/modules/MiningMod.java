@@ -1,3 +1,10 @@
+/**
+ * 
+ * Abstract class setting the basic template for modules for mining 
+ * 
+ * @author Shawn Potter
+ */
+
 package modules;
 
 public abstract class MiningMod {
