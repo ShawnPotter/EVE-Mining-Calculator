@@ -1,3 +1,11 @@
+package main;
+
+import java.util.Scanner;
+import character.Character;
+import modules.*;
+import ores.*;
+import ships.*;
+
 /**
  * 
  * The launcher for the calculator. Currently only running on System output,
@@ -5,16 +13,10 @@
  * and maybe later using things like buttons and radio buttons.
  * 
  * I've actually made both a version almost exactly like this and one with a GUI 
- * in Python for finals in my IT classes. 
+ * in Python for finals in my IT classes. Currently still planning out this class more or less.
  * 
  * @author Shawn Potter
  */
-
-package main;
-
-import java.util.Scanner;
-
-import character.Character;
 
 public class Main {
 
@@ -22,6 +24,11 @@ public class Main {
 		// Instantiate classes
 		Scanner input = new Scanner(System.in);
 		Character user = new Character();
+		
+		// needed variables
+		int shipChoice = 0;
+		int modChoice = 0;
+		
 		
 		// Introduction
 		System.out.println("*****************");
@@ -56,6 +63,70 @@ public class Main {
 		
 		System.out.print("Enter your Exhumers Skill Level: ");
 		user.setExhumerSkill(input.nextInt());
+		
+		// user now needs to choose their ship 
+		System.out.println("****************");
+		System.out.println("Now you'll choose your ship. Based on your skills you can choose:");
+		if(user.getFrigateSkill()>=1) { // if the user has Mining Frigate I
+			System.out.println("1. Venture");
+		} if(user.getExpeditionSkill()>=1 && user.getFrigateSkill() == 5) { // if the user has Expedition Frigate I and Mining Frigate I
+			System.out.println("2. Prospect");
+			System.out.println("3. Endurance");
+		} /*if(user.getBargeSkills()>=1 
+				&& user.getFrigateSkill() >=3 
+				&& user.getAstrogeoSkill()>=3
+				&& user.getMiningSkill()>=4) { // if the user has Mining Barge I
+			System.out.println("4. Procurer");
+			System.out.println("5. Retriever"); // CURRENTLY UNUSED
+			System.out.println("6. Covetor"); 
+		} if(user.getExhumerSkill()>=1) { // if the user has Exhumers I
+			System.out.println("7. Skiff");
+			System.out.println("8. Mackinaw");
+			System.out.println("9. Hulk");
+		}*/
+		System.out.print("Enter the number of the corrosponding ship: ");
+		shipChoice = input.nextInt();
+		
+		// the user's choice will now be used to create the ship
+		if(shipChoice == 1) {
+			Ship ship = new Venture();
+		}else if(shipChoice == 2) {
+			Ship ship = new Prospect();
+		}else if(shipChoice == 3) {
+			Ship ship = new Endurance();
+		}/*else if(shipChoice == 4) {
+			Ship ship = new Procurer();
+		}else if(shipChoice == 5) {
+			Ship ship = new Retriever();
+		}else if(shipChoice == 6) {
+			Ship ship = new Covetor();
+		}else if(shipChoice == 7) {
+			Ship ship = new Skiff();		// currently unused
+		}else if(shipChoice == 8) {			// haven't built classes for these yet
+			Ship ship = new Mackinaw();
+		}else if(shipChoice == 9) {
+			Ship ship = new Hulk();
+		}
+		*/
+		
+		// user now needs to pick their module
+		System.out.println("Now pick your module: ");
+		if(user.getMiningSkill()>=1) {
+			System.out.println("1. Miner I");
+		}if(user.getMiningSkill()==5) {
+			System.out.println("2. Miner II");
+		}
+		
+		// user's choice will create the module
+		System.out.print("Enter the number of the corrosponding module: ");
+		modChoice = input.nextInt();
+		if(modChoice == 1) {
+			Mod mod = new Miner1();
+		}else if (modChoice == 2) {
+			Mod mod = new Miner2();
+		}
+		
+		
 		
 		// close the scanner
 		input.close();

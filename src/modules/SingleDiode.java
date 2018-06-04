@@ -4,7 +4,7 @@
 
 package modules;
 
-public class SingleDiode extends MiningMod {
+public class SingleDiode extends Mod {
 
 	public SingleDiode() {
 		super();

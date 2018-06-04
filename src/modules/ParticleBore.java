@@ -4,7 +4,7 @@
 
 package modules;
 
-public class ParticleBore extends MiningMod {
+public class ParticleBore extends Mod {
 
 	public ParticleBore() {
 		super();

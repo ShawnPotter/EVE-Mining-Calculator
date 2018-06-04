@@ -1,3 +1,7 @@
+
+
+package ships;
+
 /**
  * 
  * Abstract template to set up all ships. Some of these variables
@@ -5,8 +9,6 @@
  *  
  * @author Shawn Potter
  */
-
-package ships;
 
 public abstract class Ship {
 	private int highSlots;

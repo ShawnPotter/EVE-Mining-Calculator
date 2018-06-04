@@ -4,7 +4,7 @@
 
 package modules;
 
-public class Gaussian extends MiningMod {
+public class Gaussian extends Mod {
 
 	public Gaussian() {
 		super();

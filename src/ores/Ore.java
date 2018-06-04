@@ -1,11 +1,11 @@
+package ores;
+
 /**
  * 
  * Abstract to set up the template for all Ores
  *  
  * @author Shawn Potter
  */
-
-package ores;
 
 public abstract class Ore {
 	// Ore Attributes

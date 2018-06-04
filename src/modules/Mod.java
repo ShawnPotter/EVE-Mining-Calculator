@@ -1,3 +1,5 @@
+package modules;
+
 /**
  * 
  * Abstract class setting the basic template for modules for mining 
@@ -5,9 +7,7 @@
  * @author Shawn Potter
  */
 
-package modules;
-
-public abstract class MiningMod {
+public abstract class Mod {
 	private String modName;
 	private int techLevel;
 	private int metaLevel;
@@ -17,12 +17,12 @@ public abstract class MiningMod {
 	private double range;
 	
 	// default constructor
-	public MiningMod() {
+	public Mod() {
 		
 	}
 	
 	// multi param constructor
-	public MiningMod(String modName, int techLevel, int metaLevel, double cpu, double powergrid, double yield, double range) {
+	public Mod(String modName, int techLevel, int metaLevel, double cpu, double powergrid, double yield, double range) {
 		super();
 		this.modName = modName;
 		this.techLevel = techLevel;

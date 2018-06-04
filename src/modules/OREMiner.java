@@ -4,7 +4,7 @@
 
 package modules;
 
-public class OREMiner extends MiningMod {
+public class OREMiner extends Mod {
 	// default constructor
 	public OREMiner() {
 		super();

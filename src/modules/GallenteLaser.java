@@ -4,7 +4,7 @@
 
 package modules;
 
-public class GallenteLaser extends MiningMod {
+public class GallenteLaser extends Mod {
 
 	public GallenteLaser() {
 		super();

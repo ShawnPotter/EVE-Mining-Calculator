@@ -4,7 +4,7 @@
 
 package modules;
 
-public class Miner2 extends MiningMod {
+public class Miner2 extends Mod {
 
 	public Miner2() {
 		super();
