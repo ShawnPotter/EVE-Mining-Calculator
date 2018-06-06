@@ -9,23 +9,11 @@ package ores;
 
 public abstract class Ore {
 	// Ore Attributes
-	private String name;
-	private String goodName; // Ore name for +5% Variant
-	private String superiorName; //Ore name for +10% Variant
-	private String eliteName; // Ore name for +15 Variant (moon mining)
-	private double volume;
-	public Ore() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
-	public Ore(String name, String goodName, String superiorName, String eliteName, double volume) {
-		super();
-		this.name = name;
-		this.goodName = goodName;
-		this.superiorName = superiorName;
-		this.eliteName = eliteName;
-		this.volume = volume;
-	}
+	protected String name;
+	protected String goodName; // Ore name for +5% Variant
+	protected String superiorName; //Ore name for +10% Variant
+	protected String eliteName; // Ore name for +15 Variant (moon mining)
+	protected double volume;
 	
 	// Getters and Setters
 	public String getName() {

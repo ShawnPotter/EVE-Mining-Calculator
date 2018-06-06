@@ -8,20 +8,13 @@ public class GallenteLaser extends Mod {
 
 	public GallenteLaser() {
 		super();
-		// TODO Auto-generated constructor stub
-	}
-
-	public GallenteLaser(String modName, int techLevel, int metaLevel, double cpu, double powergrid, double yield,
-			double range) {
-		super(modName, techLevel, metaLevel, cpu, powergrid, yield, range);
 		// attributes
-		modName = "Gallente Mining Laser";
-		techLevel = 1;
-		metaLevel = 8;
-		cpu = 60;
-		powergrid = 3;
-		yield = 45;
-		range = 10;
+		this.modName = "Gallente Mining Laser";
+		this.techLevel = 1;
+		this.metaLevel = 8;
+		this.cpu = 60;
+		this.powergrid = 3;
+		this.yield = 45;
+		this.range = 10;
 	}
-
 }

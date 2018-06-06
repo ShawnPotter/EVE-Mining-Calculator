@@ -9,20 +9,13 @@ public class OREMiner extends Mod {
 	public OREMiner() {
 		super();
 		// TODO Auto-generated constructor stub
-	}
-	
-	// multi param constructor
-	public OREMiner(String modName, int techLevel, int metaLevel, double cpu, double powergrid, double yield,
-			double range) {
-		super(modName, techLevel, metaLevel, cpu, powergrid, yield, range);
 		// attributes
-		modName = "ORE Miner";
-		techLevel = 1;
-		metaLevel = 8;
-		cpu = 80;
-		powergrid = 4;
-		yield = 65;
-		range = 16;
+		this.modName = "ORE Miner";
+		this.techLevel = 1;
+		this.metaLevel = 8;
+		this.cpu = 80;
+		this.powergrid = 4;
+		this.yield = 65;
+		this.range = 16;
 	}
-
 }

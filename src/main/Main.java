@@ -28,6 +28,18 @@ public class Main {
 		// needed variables
 		int shipChoice = 0;
 		int modChoice = 0;
+		int oreChoice = 0;
+		String shipName = "";
+		int numMods = 0; //how many mods a ship can field
+		double roleYBonus = 0;
+		double shipYBonus = 0;
+		double shipRDuration = 0;
+		double roleRDuration = 0;
+		double advRDuration = 0; 
+		double advYBonus = 0;
+		double modYield = 0;
+		double totalYield = 0;
+		
 		
 		
 		// Introduction
@@ -90,6 +102,14 @@ public class Main {
 		// the user's choice will now be used to create the ship
 		if(shipChoice == 1) {
 			Ship ship = new Venture();
+			shipName = ship.getName();
+			numMods = ship.getTurrets();
+			shipYBonus = ship.getShipYieldBonus();
+			shipRDuration = ship.getGasReduceDuration();
+			roleYBonus = ship.getRoleYieldBonus();
+			roleRDuration = ship.getRoleReduceDuration();
+			advRDuration = ship.getAdvShipReduceDuration(); 
+			advYBonus = ship.getAdvShipYieldBonus();
 		}else if(shipChoice == 2) {
 			Ship ship = new Prospect();
 		}else if(shipChoice == 3) {
@@ -122,9 +142,42 @@ public class Main {
 		modChoice = input.nextInt();
 		if(modChoice == 1) {
 			Mod mod = new Miner1();
+			modYield = mod.getYield();
 		}else if (modChoice == 2) {
 			Mod mod = new Miner2();
+			modYield = mod.getYield();
 		}
+		
+		// user now needs to pick what type of Ore they're mining
+		// for now only going to list Veldspar
+		System.out.println("Now pick the Ore you are mining: ");
+		System.out.println("1. Veldspar");
+		
+		// user's choice will create the Ore
+		System.out.println();
+		oreChoice = input.nextInt();
+		if(oreChoice == 1) {
+			Ore ore = new Veldspar();
+		}
+		
+		
+		//basic formula for mining yields
+		/*
+		 * TotalYield = BaseModYield * (1.05 * MiningLevel) * (1.05 * AstrogeoLevel) * (Role Bonus) * (Ship bonus)
+		 */
+		// formulas are going to be dependant on ship class (Mining Frigate, Expedition, Barge, Exhumer)
+		
+		if(shipName.equals("Venture")) {
+			totalYield = modYield 
+					* (1 + (0.05 * user.getMiningSkill())) 
+					* (1 + (0.05 * user.getAstrogeoSkill())) 
+					* (roleYBonus + 1) 
+					* (1 + (shipYBonus * user.getFrigateSkill()))
+					* numMods;
+		}
+		System.out.println("Total Yield is " +totalYield+" units per cycle." );
+		
+		
 		
 		
 		

@@ -9,19 +9,14 @@ public class Miner1 extends Mod {
 	public Miner1() {
 		super();
 		// TODO Auto-generated constructor stub
-	}
-
-	public Miner1(String modName, int techLevel, int metaLevel, double cpu, double powergrid, double yield, double range) {
-		super(modName, techLevel, metaLevel, cpu, powergrid, yield, range);
 		// attributes
-		modName = "Miner I";
-		techLevel = 1;
-		metaLevel = 0;
-		cpu = 60;
-		powergrid = 2;
-		yield = 40;
-		range = 10;
+		this.modName = "Miner I";
+		this.techLevel = 1;
+		this.metaLevel = 0;
+		this.cpu = 60;
+		this.powergrid = 2;
+		this.yield = 40;
+		this.range = 10;
 	}
-	
 	
 }

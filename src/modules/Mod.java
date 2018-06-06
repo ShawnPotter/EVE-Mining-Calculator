@@ -8,30 +8,13 @@ package modules;
  */
 
 public abstract class Mod {
-	private String modName;
-	private int techLevel;
-	private int metaLevel;
-	private double cpu;
-	private double powergrid;
-	private double yield;
-	private double range;
-	
-	// default constructor
-	public Mod() {
-		
-	}
-	
-	// multi param constructor
-	public Mod(String modName, int techLevel, int metaLevel, double cpu, double powergrid, double yield, double range) {
-		super();
-		this.modName = modName;
-		this.techLevel = techLevel;
-		this.metaLevel = metaLevel;
-		this.cpu = cpu;
-		this.powergrid = powergrid;
-		this.yield = yield;
-		this.range = range;
-	}
+	protected String modName;
+	protected int techLevel;
+	protected int metaLevel;
+	protected double cpu;
+	protected double powergrid;
+	protected double yield;
+	protected double range;
 	
 	// getters and setters
 	public String getModName() {

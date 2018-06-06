@@ -3,16 +3,10 @@ package ores;
 public class Omber extends Ore {
 
 	public Omber() {
-		// TODO Auto-generated constructor stub
+		this.name = "Omber";
+		this.goodName = "Silvery " + name;
+		this.superiorName = "Golden " + name;
+		this.eliteName = "Platinoid " + name;
+		this.volume = 0.6;
 	}
-
-	public Omber(String name, String goodName, String superiorName, String eliteName, double volume) {
-		super(name, goodName, superiorName, eliteName, volume);
-		name = "Omber";
-		goodName = "Silvery " + name;
-		superiorName = "Golden " + name;
-		eliteName = "Platinoid " + name;
-		volume = 0.6;
-	}
-
 }

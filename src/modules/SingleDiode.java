@@ -8,20 +8,13 @@ public class SingleDiode extends Mod {
 
 	public SingleDiode() {
 		super();
-		// TODO Auto-generated constructor stub
-	}
-
-	public SingleDiode(String modName, int techLevel, int metaLevel, double cpu, double powergrid, double yield,
-			double range) {
-		super(modName, techLevel, metaLevel, cpu, powergrid, yield, range);
 		// attributes
-		modName = "Single Diode Basic Mining Laser";
-		techLevel = 1;
-		metaLevel = 6;
-		cpu = 45;
-		powergrid = 2;
-		yield = 25;
-		range = 11;
+		this.modName = "Single Diode Basic Mining Laser";
+		this.techLevel = 1;
+		this.metaLevel = 6;
+		this.cpu = 45;
+		this.powergrid = 2;
+		this.yield = 25;
+		this.range = 11;
 	}
-
 }

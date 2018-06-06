@@ -4,15 +4,10 @@ public class Mercoxit extends Ore {
 
 	public Mercoxit() {
 		// TODO Auto-generated constructor stub
+		this.name = "Mercoxit";
+		this.goodName = "Magma " + name;
+		this.superiorName = "Vitreous " + name;
+		this.eliteName = ""; // does not exist
+		this.volume = 40;
 	}
-
-	public Mercoxit(String name, String goodName, String superiorName, String eliteName, double volume) {
-		super(name, goodName, superiorName, eliteName, volume);
-		name = "Mercoxit";
-		goodName = "Magma " + name;
-		superiorName = "Vitreous " + name;
-		eliteName = ""; // does not exist
-		volume = 40;
-	}
-
 }
