@@ -71,7 +71,7 @@ public class Main {
 		user.setExpeditionSkill(input.nextInt());
 		
 		System.out.print("Enter your Mining Barge Skill Level: ");
-		user.setBargeSkills(input.nextInt());
+		user.setBargeSkill(input.nextInt());
 		
 		System.out.print("Enter your Exhumers Skill Level: ");
 		user.setExhumerSkill(input.nextInt());
@@ -81,21 +81,21 @@ public class Main {
 		System.out.println("Now you'll choose your ship. Based on your skills you can choose:");
 		if(user.getFrigateSkill()>=1) { // if the user has Mining Frigate I
 			System.out.println("1. Venture");
-		} if(user.getExpeditionSkill()>=1 && user.getFrigateSkill() == 5) { // if the user has Expedition Frigate I and Mining Frigate I
+		}if(user.getExpeditionSkill()>=1 && user.getFrigateSkill() == 5) { // if the user has Expedition Frigate I and Mining Frigate I
 			System.out.println("2. Prospect");
 			System.out.println("3. Endurance");
-		} /*if(user.getBargeSkills()>=1 
+		}if(user.getBargeSkill()>=1 
 				&& user.getFrigateSkill() >=3 
 				&& user.getAstrogeoSkill()>=3
 				&& user.getMiningSkill()>=4) { // if the user has Mining Barge I
 			System.out.println("4. Procurer");
-			System.out.println("5. Retriever"); // CURRENTLY UNUSED
+			System.out.println("5. Retriever");
 			System.out.println("6. Covetor"); 
-		} if(user.getExhumerSkill()>=1) { // if the user has Exhumers I
+		}if(user.getExhumerSkill()>=1) { // if the user has Exhumers I
 			System.out.println("7. Skiff");
 			System.out.println("8. Mackinaw");
 			System.out.println("9. Hulk");
-		}*/
+		}
 		System.out.print("Enter the number of the corrosponding ship: ");
 		shipChoice = input.nextInt();
 		
@@ -112,29 +112,105 @@ public class Main {
 			advYBonus = ship.getAdvShipYieldBonus();
 		}else if(shipChoice == 2) {
 			Ship ship = new Prospect();
+			shipName = ship.getName();
+			numMods = ship.getTurrets();
+			shipYBonus = ship.getShipYieldBonus();
+			shipRDuration = ship.getGasReduceDuration();
+			roleYBonus = ship.getRoleYieldBonus();
+			roleRDuration = ship.getRoleReduceDuration();
+			advRDuration = ship.getAdvShipReduceDuration(); 
+			advYBonus = ship.getAdvShipYieldBonus();
 		}else if(shipChoice == 3) {
 			Ship ship = new Endurance();
-		}/*else if(shipChoice == 4) {
+			shipName = ship.getName();
+			numMods = ship.getTurrets();
+			shipYBonus = ship.getShipYieldBonus();
+			shipRDuration = ship.getGasReduceDuration();
+			roleYBonus = ship.getRoleYieldBonus();
+			roleRDuration = ship.getRoleReduceDuration();
+			advRDuration = ship.getAdvShipReduceDuration(); 
+			advYBonus = ship.getAdvShipYieldBonus();
+		}else if(shipChoice == 4) {
 			Ship ship = new Procurer();
+			shipName = ship.getName();
+			numMods = ship.getTurrets();
+			shipYBonus = ship.getShipYieldBonus();
+			shipRDuration = ship.getGasReduceDuration();
+			roleYBonus = ship.getRoleYieldBonus();
+			roleRDuration = ship.getRoleReduceDuration();
+			advRDuration = ship.getAdvShipReduceDuration(); 
+			advYBonus = ship.getAdvShipYieldBonus();
 		}else if(shipChoice == 5) {
 			Ship ship = new Retriever();
+			shipName = ship.getName();
+			numMods = ship.getTurrets();
+			shipYBonus = ship.getShipYieldBonus();
+			shipRDuration = ship.getGasReduceDuration();
+			roleYBonus = ship.getRoleYieldBonus();
+			roleRDuration = ship.getRoleReduceDuration();
+			advRDuration = ship.getAdvShipReduceDuration(); 
+			advYBonus = ship.getAdvShipYieldBonus();
 		}else if(shipChoice == 6) {
 			Ship ship = new Covetor();
+			shipName = ship.getName();
+			numMods = ship.getTurrets();
+			shipYBonus = ship.getShipYieldBonus();
+			shipRDuration = ship.getGasReduceDuration();
+			roleYBonus = ship.getRoleYieldBonus();
+			roleRDuration = ship.getRoleReduceDuration();
+			advRDuration = ship.getAdvShipReduceDuration(); 
+			advYBonus = ship.getAdvShipYieldBonus();
 		}else if(shipChoice == 7) {
-			Ship ship = new Skiff();		// currently unused
-		}else if(shipChoice == 8) {			// haven't built classes for these yet
+			Ship ship = new Skiff();
+			shipName = ship.getName();
+			numMods = ship.getTurrets();
+			shipYBonus = ship.getShipYieldBonus();
+			shipRDuration = ship.getGasReduceDuration();
+			roleYBonus = ship.getRoleYieldBonus();
+			roleRDuration = ship.getRoleReduceDuration();
+			advRDuration = ship.getAdvShipReduceDuration(); 
+			advYBonus = ship.getAdvShipYieldBonus();
+		}else if(shipChoice == 8) {
 			Ship ship = new Mackinaw();
+			shipName = ship.getName();
+			numMods = ship.getTurrets();
+			shipYBonus = ship.getShipYieldBonus();
+			shipRDuration = ship.getGasReduceDuration();
+			roleYBonus = ship.getRoleYieldBonus();
+			roleRDuration = ship.getRoleReduceDuration();
+			advRDuration = ship.getAdvShipReduceDuration(); 
+			advYBonus = ship.getAdvShipYieldBonus();
 		}else if(shipChoice == 9) {
 			Ship ship = new Hulk();
+			shipName = ship.getName();
+			numMods = ship.getTurrets();
+			shipYBonus = ship.getShipYieldBonus();
+			shipRDuration = ship.getGasReduceDuration();
+			roleYBonus = ship.getRoleYieldBonus();
+			roleRDuration = ship.getRoleReduceDuration();
+			advRDuration = ship.getAdvShipReduceDuration(); 
+			advYBonus = ship.getAdvShipYieldBonus();
 		}
-		*/
 		
 		// user now needs to pick their module
 		System.out.println("Now pick your module: ");
-		if(user.getMiningSkill()>=1) {
+		System.out.println("Mining Lasers: ");
+		if(user.getMiningSkill() == 1 ) {
 			System.out.println("1. Miner I");
-		}if(user.getMiningSkill()==5) {
-			System.out.println("2. Miner II");
+			System.out.println("2. EP-S Gaussian Scoped Mining Laser");
+			System.out.println("3. Particle Bore COmpact Mining Laser");
+			System.out.println("4. Single Diode Basic Mining Laser (storyline)");
+			System.out.println("5. ORE Miner (faction)");
+			System.out.println("6. Gallente Mining Laser");
+		}if(user.getMiningSkill() == 5) {
+			System.out.println("7. Miner II");
+		}
+		System.out.println("Deep Core Mining Lasers:");
+		if(user.getDeepCoreSkill() == 1) {
+			System.out.println("8. Deep Core Mining Laser I");
+			System.out.println("9. ORE Deep Core Mining Laser");
+		}if(user.getDeepCoreSkill() == 5) {
+			System.out.println("10. Modulated Deep Core Miner II");
 		}
 		
 		// user's choice will create the module
@@ -167,12 +243,21 @@ public class Main {
 		 */
 		// formulas are going to be dependant on ship class (Mining Frigate, Expedition, Barge, Exhumer)
 		
-		if(shipName.equals("Venture")) {
+		if (shipChoice >= 1 && shipChoice <= 3) {
 			totalYield = modYield 
 					* (1 + (0.05 * user.getMiningSkill())) 
 					* (1 + (0.05 * user.getAstrogeoSkill())) 
 					* (roleYBonus + 1) 
 					* (1 + (shipYBonus * user.getFrigateSkill()))
+					* (1 + (advYBonus * user.getExpeditionSkill()))
+					* numMods;
+		}else if(shipChoice >= 4 && shipChoice <= 9) {
+			totalYield = modYield 
+					* (1 + (0.05 * user.getMiningSkill())) 
+					* (1 + (0.05 * user.getAstrogeoSkill())) 
+					* (roleYBonus + 1) 
+					* (1 + (shipYBonus * user.getBargeSkill()))
+					* (1 + (advYBonus * user.getExhumerSkill()))
 					* numMods;
 		}
 		System.out.println("Total Yield is " +totalYield+" units per cycle." );

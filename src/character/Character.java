@@ -16,7 +16,7 @@ public class Character {
 	private int deepCoreSkill;
 	private int frigateSkill;
 	private int expeditionSkill;
-	private int bargeSkills;
+	private int bargeSkill;
 	private int exhumerSkill;
 	
 	// these skills have no impact on the program
@@ -99,12 +99,12 @@ public class Character {
 		this.expeditionSkill = expeditionSkill;
 	}
 
-	public int getBargeSkills() {
-		return bargeSkills;
+	public int getBargeSkill() {
+		return bargeSkill;
 	}
 
-	public void setBargeSkills(int bargeSkills) {
-		this.bargeSkills = bargeSkills;
+	public void setBargeSkill(int bargeSkill) {
+		this.bargeSkill = bargeSkill;
 	}
 
 	public int getExhumerSkill() {
@@ -119,8 +119,8 @@ public class Character {
 	public String toString() {
 		return "Character [miningSkill=" + miningSkill + ", astrogeoSkill=" + astrogeoSkill + ", iceHarvestSkill="
 				+ iceHarvestSkill + ", gasHarvestSkill=" + gasHarvestSkill + ", deepCoreSkill=" + deepCoreSkill
-				+ ", frigateSkill=" + frigateSkill + ", expeditionSkill=" + expeditionSkill + ", bargeSkills="
-				+ bargeSkills + ", exhumerSkill=" + exhumerSkill + "]";
+				+ ", frigateSkill=" + frigateSkill + ", expeditionSkill=" + expeditionSkill + ", bargeSkill="
+				+ bargeSkill + ", exhumerSkill=" + exhumerSkill + "]";
 	}
 
 	

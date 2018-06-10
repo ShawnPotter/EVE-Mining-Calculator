@@ -32,5 +32,6 @@ public class Prospect extends Ship {
 		this.advShipReduceDuration = 0;
 		this.advShipYieldBonus = 0;
 		this.roleReduceDuration = 0;
+		this.cargoBonus = 0;
 	}
 }

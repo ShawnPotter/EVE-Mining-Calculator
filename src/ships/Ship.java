@@ -28,6 +28,7 @@ public abstract class Ship {
 	protected double advShipYieldBonus;
 	protected double advShipReduceDuration;
 	protected double roleReduceDuration;
+	protected double cargoBonus;
 	
 	
 	public String getName() {
@@ -182,6 +183,12 @@ public abstract class Ship {
 
 	public void setTurrets(int turrets) {
 		this.turrets = turrets;
+	}
+	public double getCargoBonus() {
+		return cargoBonus;
+	}
+	public void setCargoBonus(double cargoBonus) {
+		this.cargoBonus = cargoBonus;
 	}
 
 	@Override
