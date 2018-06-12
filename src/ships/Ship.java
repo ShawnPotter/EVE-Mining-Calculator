@@ -190,6 +190,9 @@ public abstract class Ship {
 	public void setCargoBonus(double cargoBonus) {
 		this.cargoBonus = cargoBonus;
 	}
+	public void setShip() {
+		
+	}
 
 	@Override
 	public String toString() {

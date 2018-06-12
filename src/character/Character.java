@@ -31,7 +31,7 @@ public class Character {
 
 	// multi param constructor
 	public Character(int miningSkill, int astrogeoSkill, int iceHarvestSkill, int gasHarvestSkill, int deepCoreSkill,
-			int frigateSkill, int expeditionSkill, int exhumerSkill) {
+			int frigateSkill, int expeditionSkill, int bargeSkill, int exhumerSkill) {
 		super();
 		this.miningSkill = miningSkill;
 		this.astrogeoSkill = astrogeoSkill;
@@ -40,6 +40,7 @@ public class Character {
 		this.deepCoreSkill = deepCoreSkill;
 		this.frigateSkill = frigateSkill;
 		this.expeditionSkill = expeditionSkill;
+		this.bargeSkill = bargeSkill;
 		this.exhumerSkill = exhumerSkill;
 	}
 	// Getters and Setters
