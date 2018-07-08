@@ -10,6 +10,11 @@ import ships.*;
  * Will move a lot of the code in the main here after I'm sure forumlas work correctly
  * Still planning on how this will work
  * @author Shawn Potter
+ * TODO:  
+ * 1. Create Ice Method
+ * 2. Modify Mod method to accept a second variable, a boolean for if the mod 
+ *    is using crystals. All mods that can't use crystals will automatically
+ *    have boolean set to false.
  */
 
 public class Calculator {

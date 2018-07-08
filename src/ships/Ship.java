@@ -2,8 +2,8 @@ package ships;
 
 /**
  * 
- * Abstract template to set up all ships. Some of these variables
- * aren't going to be used for right now.
+ * Abstract template to set up all ships. All variables will be assigned to ships
+ * but not all variables will be definitively used. 
  *  
  * @author Shawn Potter
  */

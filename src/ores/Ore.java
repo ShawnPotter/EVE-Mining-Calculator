@@ -2,7 +2,7 @@ package ores;
 
 /**
  * 
- * Abstract to set up the template for all Ores
+ * Abstract to set up the template for all Ore Asteroids
  *  
  * @author Shawn Potter
  */
