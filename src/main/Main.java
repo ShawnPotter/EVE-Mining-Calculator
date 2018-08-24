@@ -104,6 +104,7 @@ public class Main {
 		System.out.println("1. Ore");
 		//System.out.println("2. Ice");
 		//System.out.println("3. Gas");
+		System.out.print("Enter the number of the type: ");
 		typeChoice = input.nextInt();
 		
 		// user now needs to pick their module
@@ -148,26 +149,23 @@ public class Main {
 		// if user strip miner IIs we must verify if they are using crystals or not
 		if (shipChoice >= 4 && modChoice == 2) {
 			System.out.println("Are you using Mining Crystals? (Y/N)");
-
+			System.out.print("Enter here: ");
+			String crystalChoice1 = input.next();
+			if(crystalChoice1.equalsIgnoreCase("Y")) {
+				useCrystal = true;
+				System.out.println("Are you using: ");
+				System.out.println("1. Tech 1 Mining Crystals");
+				System.out.println("2. Tech 2 Mining Crystals");
+				System.out.print("Enter the corrosponding number: ");
+				crystalChoice = input.nextInt();
+			}
 		}
-		System.out.print("Enter here: ");
-
-		String crystalChoice1 = input.next();
-		if(crystalChoice1.equalsIgnoreCase("Y")) {
-			useCrystal = true;
-			System.out.println("Are you using: ");
-			System.out.println("1. Tech 1 Mining Crystals");
-			System.out.println("2. Tech 2 Mining Crystals");
-		}
-		System.out.print("Enter the corrosponding number: ");
-		crystalChoice = input.nextInt();
 
 		if(typeChoice == 1) {
 			// user now needs to pick what type of Ore they're mining
 			// for now only going to list Veldspar
 			System.out.println("Now pick the Ore you are mining: ");
 			System.out.println("1. Veldspar");
-			/*
 			System.out.println("2. Scordite");
 			System.out.println("3. Pyroxeres");
 			System.out.println("4. Plagioclase");
@@ -188,7 +186,6 @@ public class Main {
 			} else if (shipChoice >= 4 && modChoice == 3) {
 				System.out.println("16. Mercoxit");
 			}
-			*/
 	
 			// user's choice will create the Ore
 			System.out.print("Enter the corrosponding number: ");
@@ -220,10 +217,10 @@ public class Main {
 		 */
 		// formulas are going to be dependent on ship class (Mining Frigate, Expedition, Barge, Exhumer)
 		System.out.println();
-		System.out.println(calc.toString()); // debug
+		//System.out.println(calc.toString()); // debug
 		System.out.println();
 		totalYield = calc.Yield(shipChoice);
-		System.out.println("Total Yield is " +totalYield+" units per cycle." );
+		System.out.println("Total Yield is " + totalYield +" units per cycle." );
 
 
 
