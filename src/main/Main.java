@@ -74,7 +74,7 @@ public class Main {
 				expeditionSkill, bargeSkill, exhumerSkill);
 
 		// user now needs to choose their ship 
-		System.out.println("****************");
+		System.out.println("\n****************");
 		System.out.println("Now you'll choose your ship. Based on your skills you can choose:");
 		if(frigateSkill>=1) { // if the user has Mining Frigate I
 			System.out.println("1. Venture");
@@ -97,7 +97,8 @@ public class Main {
 		shipChoice = input.nextInt();
 		calc.Ship(shipChoice);
 		//		System.out.println(calc.getName()); // debug
-
+		
+		System.out.println("\n****************");
 		
 		// determine what type of mining the user is doing
 		System.out.println("What type of mining are you doing?");
@@ -106,6 +107,8 @@ public class Main {
 		//System.out.println("3. Gas");
 		System.out.print("Enter the number of the type: ");
 		typeChoice = input.nextInt();
+		
+		System.out.println("\n****************");
 		
 		// user now needs to pick their module
 		if(typeChoice == 1) { // Ore Mining Options
@@ -145,6 +148,8 @@ public class Main {
 		System.out.print("Enter the number of the corrosponding module: ");
 		modChoice = input.nextInt();
 		calc.Mod(modChoice);
+		
+		System.out.println("\n****************");
 
 		// if user strip miner IIs we must verify if they are using crystals or not
 		if (shipChoice >= 4 && modChoice == 2) {
@@ -158,6 +163,8 @@ public class Main {
 				System.out.println("2. Tech 2 Mining Crystals");
 				System.out.print("Enter the corrosponding number: ");
 				crystalChoice = input.nextInt();
+				
+				System.out.println("\n****************");
 			}
 		}
 
@@ -191,6 +198,9 @@ public class Main {
 			System.out.print("Enter the corrosponding number: ");
 			oreChoice = input.nextInt();
 			calc.Ore(oreChoice);
+			
+			System.out.println("\n****************");
+			
 		} else if (typeChoice == 2) {
 			// user needs to pick the Ice they are mining
 			System.out.println("Now pick the type of Ice you are mining: ");
@@ -204,12 +214,11 @@ public class Main {
 			System.out.println("8. Krystallos");
 			
 			System.out.print("Enter the corrosponding number: ");
-			/*
 			iceChoice = input.nextInt();
-			calc.Ice(iceChoice);
-			*/
+			//calc.Ice(iceChoice);
+			System.out.println("\n****************");
 		} else if (typeChoice == 3) {
-			
+			System.out.println("\n****************");
 		}
 		//basic formula for mining yields
 		/*
